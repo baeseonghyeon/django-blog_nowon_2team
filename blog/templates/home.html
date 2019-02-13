@@ -2,19 +2,23 @@
 
 {% block contents %}
 
+{% load staticfiles %} 
+
 <div class="container">
+<img src="{% static 'likelion 7th.png' %}" class="main-img mx-auto" alt="static image">
 {# {% for blog in blogs.all %} 전체 블로그 글을 대상으로 반복문 수행 #}
 {% for blog in posts %} {# 한 페이지 (글 3개)를 대상으로 반복문 수행 #}
-    <div class="card" style="width: auto; margin: 20px;">
+<a href="{%url 'detail' blog.id%}" class="card-link">
+    <div class="card" style="width: auto; margin: 10px;">
         <div class="card-body">
             <h5 class="card-title">{{blog.title}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{blog.pub_date}}</h6>
-            <p class="card-text">{{blog.summary}}</p>
-            <a href="{%url 'detail' blog.id%}" class="card-link">...more</a>
+            <p class="card-text">{{blog.summary}}...</p>
         </div>
     </div>
+</a>  
  {%endfor%}  
-    <div class="mx-auto" style="width: 156px;">
+    <div class="page-box mx-auto" style="width: 156px;">
     {# First Previous 3of4 Next Last #}
         {# First Previous #}
         {%if posts.has_previous%} <!-- 이전페이지가 존재한다면 -->
