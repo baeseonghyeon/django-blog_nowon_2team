@@ -1,2 +1,2 @@
 web: gunicorn project04.wsgi --log-file -
-web: python project04/manage.py runserver 0.0.0.0:$PORT
+web: python project04/manage.py runserver 127.0.0.1:$PORT
