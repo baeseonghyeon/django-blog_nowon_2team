@@ -1,0 +1,9 @@
+input {
+    width: 100%!important;
+}
+h1 {
+    font-size: 200px!important;
+}
+.card-body {
+    width: 200px!important;
+}

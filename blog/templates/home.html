@@ -5,7 +5,7 @@
 <div class="container">
 {# {% for blog in blogs.all %} 전체 블로그 글을 대상으로 반복문 수행 #}
 {% for blog in posts %} {# 한 페이지 (글 3개)를 대상으로 반복문 수행 #}
-    <div class="card" style="width: 100%; margin: 20px;">
+    <div class="card" style="width: auto; margin: 20px;">
         <div class="card-body">
             <h5 class="card-title">{{blog.title}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{blog.pub_date}}</h6>
@@ -14,24 +14,24 @@
         </div>
     </div>
  {%endfor%}  
-
-{# First Previous 3of4 Next Last #}
-    {# First Previous #}
-    {%if posts.has_previous%} <!-- 이전페이지가 존재한다면 -->
-    <a href="?page=1" class="btn btn-outline-dark btn-sm">Fisrt</a> <!-- 1번 페이지 -->
-    <a href="?page={{posts.previous_page_number}}" class="btn btn-outline-dark btn-sm">Previous</a> <!-- 현재 페이지의 전 페이지 -->
-    {%endif%}
-    {# 3of4 #}
-    <span class="btn btn-outline-dark btn-sm">
-    <span>{{posts.number}}</span> <!-- 현재 페이지 번호 -->
-    <span>of</span>
-    <span>{{posts.paginator.num_pages}}</span> <!-- 전체 페이지 수 -->
-    </span>
-    {# Next Last #}
-    {%if posts.has_next%} <!-- 다음페이지가 존재한다면 -->
-    <a href="?page={{posts.next_page_number}}" class="btn btn-outline-dark btn-sm">Next</a> <!-- 현재 페이지의 다음 페이지 -->
-    <a href="?page={{posts.paginator.num_pages}}" class="btn btn-outline-dark btn-sm">Last</a> <!-- 마지막(전체 페이지 수) 페이지 -->
-    {%endif%}
+    <div class="mx-auto" style="width: 156px;">
+    {# First Previous 3of4 Next Last #}
+        {# First Previous #}
+        {%if posts.has_previous%} <!-- 이전페이지가 존재한다면 -->
+        <a href="?page=1" class="btn btn-outline-dark btn-sm">Fisrt</a> <!-- 1번 페이지 -->
+        <a href="?page={{posts.previous_page_number}}" class="btn btn-outline-dark btn-sm">Previous</a> <!-- 현재 페이지의 전 페이지 -->
+        {%endif%}
+        {# 3of4 #}
+        <span class="btn btn-outline-dark btn-sm">
+        <span>{{posts.number}}</span> <!-- 현재 페이지 번호 -->
+        <span>of</span>
+        <span>{{posts.paginator.num_pages}}</span> <!-- 전체 페이지 수 -->
+        </span>
+        {# Next Last #}
+        {%if posts.has_next%} <!-- 다음페이지가 존재한다면 -->
+        <a href="?page={{posts.next_page_number}}" class="btn btn-outline-dark btn-sm">Next</a> <!-- 현재 페이지의 다음 페이지 -->
+        <a href="?page={{posts.paginator.num_pages}}" class="btn btn-outline-dark btn-sm">Last</a> <!-- 마지막(전체 페이지 수) 페이지 -->
+        {%endif%}
     </div>
 </div>
 
