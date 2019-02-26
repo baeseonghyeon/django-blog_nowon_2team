@@ -1,6 +1,6 @@
-# Python django blog project likelion 7th
+# 멋쟁이 사자처럼 7기 운영진 스터디 노원 2팀 프로젝트
 
-## 멋쟁이 사자처럼 7기 운영진 교육 진행 프로젝트 입니다.
+## 노원 2팀 블로그 프로젝트 입니다.
 
 ### 1. model, amdin
 ### 2. pk, path converter, get_object_404
