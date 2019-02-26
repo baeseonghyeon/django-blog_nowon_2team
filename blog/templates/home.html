@@ -4,9 +4,15 @@
 
 {% load staticfiles %} 
 
-<div class="container">
+<div class="container" id="index-con">
+<div class="main-img"></div>
+<div class="main-text">
+    <h2>안녕하세요. 우리는 멋쟁이사자처럼 7기 운영진<h2>
+    <h1>노원 2팀<h1>
+    <h2>입니다.</h2>
+</div>
 
-<img src="{% static 'likelion 7th.png' %}" class="main-img mx-auto" alt="static image">
+{% comment %} <img src="{% static 'likelion 7th.png' %}" class="main-img mx-auto" alt="static image"> {% endcomment %}
 {# {% for blog in blogs.all %} 전체 블로그 글을 대상으로 반복문 수행 #}
 {% for blog in posts %} {# 한 페이지 (글 3개)를 대상으로 반복문 수행 #}
 <a href="{%url 'detail' blog.id%}" class="card-link">

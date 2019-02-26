@@ -1,0 +1,119 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600');
+
+* { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
+p, h1 { color: white!important; }
+#text { color: white!important; }
+body {
+    margin-top:57px;
+    margin-bottom:57px;
+    background: #1a1a1a;
+}
+
+#index-con {
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%!important;
+}
+.main-text {
+    padding: 5%;
+    text-align: center;
+    position: relative;
+    top: -500px;
+    color: white; 
+}
+.main-text h1 {
+    font-weight: 100;
+    font-size: 5rem;
+}
+.main-text h2 {
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+.main-img {
+    margin: 0px;
+    background: url(/static/bgimg/bg.jpg);
+    background-size:  cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-attachment: fixed;
+    filter: grayscale(50%);
+    -webkit-filter: grayscale(50%);
+    filter: brightness(60%);
+    -webkit-filter: brightness(60%); 
+}
+  .navbar {
+    /* border-bottom: 1px solid #dfdfdf; */
+    background: #1a1a1a!important;
+    padding: 8px 10%;
+  }
+  .nav-link {
+    color: white!important;
+    font-weight: 100;
+    font-size: 0.9rem;
+  }
+  .logo {
+    width: 165px;
+    height: 19px;
+    margin-right: 10px;
+    background: url(/static/basiclogo_E_H_W.png);
+    background-size: cover;
+    display: inline-block;
+  }
+  .navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+  }
+  /* .main-img {
+    width: 700px;
+    height: 700px;
+    display: block;
+  } */
+  #id_title, #id_body {
+    width: 100%;
+  }
+  table {
+    width: 100%;
+    margin-top: 100px;
+  }
+  .sub {
+    width: 56px;
+  }
+  a .card-title, .card-body {
+    color: black;
+  }
+  .page-box {
+    margin-top: 50px;
+  }
+  
+/* 모바일 */
+@media (max-width: 768px){
+    .navbar {
+        padding: 8px 5%;
+    }
+    .navbar-toggler {
+        border: none;
+    }
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    .logo {
+        width: 108px;
+        height: 12px;
+    }
+    .main-img {
+        background-size:  contain;
+    }
+    .main-text h1 {
+        font-weight: 100;
+        font-size: 2.5rem;
+    }
+    .main-text h2 {
+        font-weight: 100;
+        font-size: 1.5rem;
+    }
+}
