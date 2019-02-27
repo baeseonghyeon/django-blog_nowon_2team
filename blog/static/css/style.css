@@ -16,20 +16,21 @@ body {
     max-width: 100%!important;
 }
 .main-text {
-    padding: 5%;
+    padding: 2% 5%;
     text-align: center;
     position: relative;
-    top: -500px;
-    color: white; 
+    top: -37rem;
+    color: white;
+    height: 0px; 
 }
-.main-text h1 {
-    font-weight: 100;
-    font-size: 5rem;
-}
-.main-text h2 {
-    font-weight: 100;
-    font-size: 3rem;
-}
+  .main-text h1 {
+      font-weight: 100;
+      font-size: 5rem;
+  }
+  .main-text h2 {
+      font-weight: 100;
+      font-size: 3rem;
+  }
 
 .main-img {
     margin: 0px;
@@ -45,11 +46,11 @@ body {
     filter: brightness(60%);
     -webkit-filter: brightness(60%); 
 }
-  .navbar {
+.navbar {
     /* border-bottom: 1px solid #dfdfdf; */
     background: #1a1a1a!important;
     padding: 8px 10%;
-  }
+}
   .nav-link {
     color: white!important;
     font-weight: 100;
@@ -68,33 +69,29 @@ body {
     font-weight: 900;
     font-family: 'Montserrat', sans-serif;
   }
-  /* .main-img {
-    width: 700px;
-    height: 700px;
-    display: block;
-  } */
-  #id_title, #id_body {
+
+#id_title, #id_body {
     width: 100%;
-  }
-  table {
+}
+table {
     width: 100%;
     margin-top: 100px;
-  }
-  .sub {
+}
+.sub {
     width: 56px;
-  }
-  a .card-title, .card-body {
+}
+a .card-title, .card-body {
     color: black;
-  }
-  .page-box {
-    margin-top: 50px;
-  }
+}
+.page-box {
+   margin-top: 50px;
+}
   
 /* 모바일 */
 @media (max-width: 768px){
-    .navbar {
-        padding: 8px 5%;
-    }
+  .navbar {
+      padding: 8px 5%;
+  }
     .navbar-toggler {
         border: none;
     }
@@ -105,9 +102,15 @@ body {
         width: 108px;
         height: 12px;
     }
-    .main-img {
-        background-size:  contain;
-    }
+
+  .main-img {
+      background-size:  contain;
+      height: 33%;
+  }
+
+  .main-text {
+      top: -12rem; 
+  }
     .main-text h1 {
         font-weight: 100;
         font-size: 2.5rem;
