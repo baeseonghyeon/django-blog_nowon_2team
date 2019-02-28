@@ -15,41 +15,28 @@ body {
     padding: 0px;
     max-width: 100%!important;
 }
-.main-text {
-    padding: 2% 5%;
-    text-align: center;
-    position: relative;
-    top: -37rem;
-    color: white;
-    height: 0px; 
+/* common */
+.line {
+  width: 40px;
+  height: 1px;
+  border: 1px solid white;
+  margin: 40px auto;
 }
-  .main-text h1 {
-      font-weight: 100;
-      font-size: 5rem;
-  }
-  .main-text h2 {
-      font-weight: 100;
-      font-size: 3rem;
-  }
-
-.main-img {
-    margin: 0px;
-    background: url(/static/bgimg/bg.jpg);
-    background-size:  cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-attachment: fixed;
-    filter: grayscale(50%);
-    -webkit-filter: grayscale(50%);
-    filter: brightness(60%);
-    -webkit-filter: brightness(60%); 
+.btn-primary {
+  background: #FF9E1B;
+  border-radius: 0;
+  border: 1px solid #FF9E1B;
+}
+.btn-primary:hover {
+  background: transparent;
+  border-radius: 0;
+  border: 1px solid #FF9E1B;
+  color:  #FF9E1B;
 }
 .navbar {
-    /* border-bottom: 1px solid #dfdfdf; */
-    background: #1a1a1a!important;
-    padding: 8px 10%;
+  /* border-bottom: 1px solid #dfdfdf; */
+  background: #1a1a1a!important;
+  padding: 8px 10%;
 }
   .nav-link {
     color: white!important;
@@ -69,6 +56,58 @@ body {
     font-weight: 900;
     font-family: 'Montserrat', sans-serif;
   }
+    .dropdown-menu {
+      border-radius: 0px!important;
+      background: #1a1a1a!important;
+      border: 1px solid #FF9E1B!important;
+    }
+    .dropdown-item {
+      text-align: center;
+      border-top-left-radius: 0px!important;
+      border-top-right-radius: 0px!important;
+    }
+    #logout {
+      margin-bottom: 0px!important;
+    }
+    .dropdown-menu a{
+      color: #FF9E1B!important;
+    }
+    .dropdown-menu a:hover{
+      background: #444444;
+    }
+
+/* home */
+.main-img {
+    margin: 0px;
+    background: url(/static/bgimg/bg.jpg);
+    background-size:  cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-attachment: fixed;
+    filter: grayscale(50%);
+    -webkit-filter: grayscale(50%);
+    filter: brightness(60%);
+    -webkit-filter: brightness(60%); 
+}
+
+.main-text {
+  padding: 2% 5%;
+  text-align: center;
+  position: relative;
+  top: -43rem;
+  color: white;
+  height: 0px; 
+}
+  .main-text h1 {
+      font-weight: 300;
+      font-size: 5rem;
+  }
+  .main-text h2 {
+      font-weight: 100;
+      font-size: 3rem;
+  }
 
 #id_title, #id_body {
     width: 100%;
@@ -86,7 +125,112 @@ a .card-title, .card-body {
 .page-box {
    margin-top: 50px;
 }
-  
+.row .member {
+  border: 2px solid white;
+  margin: 50px auto!important;
+  padding-top: 16px;
+  /* display: none; */
+}
+.show {
+  /* display: block; */
+}
+#member {
+  color:white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  width: 500px;
+  margin: 100px auto;
+}
+  #member th {
+    margin-bottom: 10px;
+  }
+.row {
+  margin-right: 0px!important;
+  margin-left: 0px!important;
+}
+.card {
+  background: transparent;
+  border-radius: 0;
+  border: 1px solid #FF9E1B;
+  color:  #FF9E1B;
+}
+  h5.card-title {
+    color:  #FF9E1B;
+  }
+
+.col-md-6 .cardbox {
+  padding-right: 0px;
+}
+/* pagenation */
+.page-box {
+  color: white;
+  text-align: center;
+  width: 200px;
+}
+  .page-box span {
+    margin: 0px 2px;
+  }
+  .page-box a {
+    color: white;
+    margin: 0px 2px;
+  }
+
+
+/* loginpage */
+.login_id {
+  color:white;
+  width: 300px;
+  margin: 10rem auto;
+}
+.login_id h1 {
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.login_id input {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+} 
+
+/* new */
+.new {
+  margin: 10rem auto;
+  max-width: 700px;
+}
+.new label {
+  margin-top: 15px;
+  color: white!important;
+}
+#id_body {
+  margin-bottom: 40px;
+}
+
+/* 활동사진 */
+.jumbotron {
+  background: transparent;
+  padding-top: 96px;
+}
+.text-muted{
+  color:white!important;
+  margin-top: 20px;
+}
+.album {
+  background: transparent!important;
+}
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+}
+.album .card{
+  max-width: 350px!important;
+  height: 420px!important;
+}
+.album .card img {
+  height: auto!important;
+  overflow: auto!important;
+  width: 100%;
+}
+
 /* 모바일 */
 @media (max-width: 768px){
   .navbar {
@@ -94,6 +238,8 @@ a .card-title, .card-body {
   }
     .navbar-toggler {
         border: none;
+        position: relative;
+        left: 15px;
     }
     .navbar-brand {
         font-size: 1rem;
@@ -106,10 +252,12 @@ a .card-title, .card-body {
   .main-img {
       background-size:  contain;
       height: 33%;
+      background-position-y: 40px;
   }
 
   .main-text {
-      top: -12rem; 
+      top: -13.5rem;
+      height: 230px; 
   }
     .main-text h1 {
         font-weight: 100;
@@ -119,4 +267,8 @@ a .card-title, .card-body {
         font-weight: 100;
         font-size: 1.5rem;
     }
+
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }  
 }

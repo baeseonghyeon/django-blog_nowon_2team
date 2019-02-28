@@ -2,25 +2,27 @@
 
 {% block contents %}
 
-<h1>회원가입</h1>
+<div class="container">
 
-<form method="POST" action="{%url 'signup'%}">
+<form method="POST" action="{%url 'signup'%}" class="login_id">
+    <h1>회원가입</h1>
     {% csrf_token %}
     <!-- csrf 공격을 방어하는 수단, 보안을 위해 난수 발생 -->
-    Username:
+    아이디
     <br>
     <input name="username" type="text" value="">
     <br>
-    Password:
+    비밀번호
     <br>
     <input name="password" type="password" value="">
     <br>
-    Confirm Password:
+    비밀번호 확인
     <br>
     <input name="password2" type="password" value="">
     <br>
     <br>
     <input class="btn btn-primary" type="submit" value="회원가입">
 </form>
+</div>
 
 {% endblock %}

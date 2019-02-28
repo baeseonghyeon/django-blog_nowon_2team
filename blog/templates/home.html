@@ -6,15 +6,57 @@
 
 <div class="container" id="index-con">
 <div class="main-img"></div>
-<div class="main-text">
-    <h2>안녕하세요. 우리는 멋쟁이사자처럼 7기 운영진<h2>
-    <h1>노원 2팀<h1>
-    <h2>입니다.</h2>
-</div>
 
+<div class="main-text">
+    <div class="row">
+        <div class="col-md-12">
+            <span id="texts"></span>
+        </div>
+        <!-- <span class="line"></span> -->
+        <div class="row member">
+            <div class="col-md-12">
+                <h4>삼육대</h4>
+                <p>김준형 김혜원 배성현 오지수 위보람</p>
+            </div>
+            <div class="col-md-12">
+                <h4>동덕여대</h4>
+                <p>안다희</p>
+            </div>
+         </div>    
+    </div>
+</div>
+<div class="row card-row">
+
+<script>   
+    var text = "<h2>안녕하세요.</h2><h2>우리는 <strong>멋쟁이 사자처럼 7기</strong> 운영진</h2><h1>노원 2팀</h1><h2>입니다.</h2>";
+    var cnt = 0;
+    var speed = 70; //글자가 찍히는 속도
+    var timer1 = null;
+        
+    function gogogo(){
+        document.getElementById('texts').innerHTML = text.substring(0, cnt) + "_";
+        cnt++;
+        timer1 = setTimeout('gogogo()', speed);
+        
+        if(text.length <= cnt){
+            // 아래 주석으로 처리된 부분을 지우면 한번만 실행됩니다.
+            clearTimeout(timer1)      
+            cnt = 0;
+        }
+    }
+        
+    gogogo();
+
+    if (gogogo()) {
+        $('member').addclass("show")
+    }
+    
+</script>   
+   
 {% comment %} <img src="{% static 'likelion 7th.png' %}" class="main-img mx-auto" alt="static image"> {% endcomment %}
 {# {% for blog in blogs.all %} 전체 블로그 글을 대상으로 반복문 수행 #}
 {% for blog in posts %} {# 한 페이지 (글 3개)를 대상으로 반복문 수행 #}
+<div class="col-md-6 cardbox"> 
 <a href="{%url 'detail' blog.id%}" class="card-link">
     <div class="card" style="width: auto; margin: 10px;">
         <div class="card-body">
@@ -23,25 +65,28 @@
             <p class="card-text">{{blog.summary}}...</p>
         </div>
     </div>
-</a>  
- {%endfor%}  
-    <div class="page-box mx-auto" style="width: 156px;">
+</a>
+</div>  
+{%endfor%} 
+    
+</div>
+    <div class="page-box mx-auto">
     {# First Previous 3of4 Next Last #}
         {# First Previous #}
         {%if posts.has_previous%} <!-- 이전페이지가 존재한다면 -->
-        <a href="?page=1" class="btn btn-outline-dark btn-sm">Fisrt</a> <!-- 1번 페이지 -->
-        <a href="?page={{posts.previous_page_number}}" class="btn btn-outline-dark btn-sm">Previous</a> <!-- 현재 페이지의 전 페이지 -->
+        <a href="?page=1" >&lt;&lt;</a> <!-- 1번 페이지 -->
+        <a href="?page={{posts.previous_page_number}}" >&lt;</a> <!-- 현재 페이지의 전 페이지 -->
         {%endif%}
         {# 3of4 #}
-        <span class="btn btn-outline-dark btn-sm">
+        <span >
         <span>{{posts.number}}</span> <!-- 현재 페이지 번호 -->
-        <span>of</span>
+        <span>|</span>
         <span>{{posts.paginator.num_pages}}</span> <!-- 전체 페이지 수 -->
         </span>
         {# Next Last #}
         {%if posts.has_next%} <!-- 다음페이지가 존재한다면 -->
-        <a href="?page={{posts.next_page_number}}" class="btn btn-outline-dark btn-sm">Next</a> <!-- 현재 페이지의 다음 페이지 -->
-        <a href="?page={{posts.paginator.num_pages}}" class="btn btn-outline-dark btn-sm">Last</a> <!-- 마지막(전체 페이지 수) 페이지 -->
+        <a href="?page={{posts.next_page_number}}" >&gt;</a> <!-- 현재 페이지의 다음 페이지 -->
+        <a href="?page={{posts.paginator.num_pages}}">&gt;&gt;</a> <!-- 마지막(전체 페이지 수) 페이지 -->
         {%endif%}
     </div>
 </div>
