@@ -129,10 +129,13 @@ a .card-title, .card-body {
   border: 2px solid white;
   margin: 50px auto!important;
   padding-top: 16px;
-  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 .show {
-  /* display: block; */
+  visibility: visible!important;
+  opacity: 1!important;
 }
 #member {
   color:white;
