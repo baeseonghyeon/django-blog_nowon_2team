@@ -208,6 +208,19 @@ a .card-title, .card-body {
   margin-bottom: 40px;
 }
 
+/* detail */
+.custom-card {
+  margin-top: 70px;
+}
+
+/* back */
+.back-btn {
+  color: white;
+}
+.back-btn:hover {
+  color : #FF9E1B;
+}
+
 /* 활동사진 */
 .jumbotron {
   background: transparent;
