@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block contents %}
 <div class="container">
-    <div class="card" style="width: 100%; margin: 20px;">
+    <div class="card" style="width: 100%; margin: 20px; display: inline-block;">
         <div class="card-body">
             <h1 class="card-title">{{blog.title}}</h1>
             <h6 class="card-subtitle mb-2 text-muted">{{blog.pub_date}}</h6>
@@ -9,4 +9,24 @@
         </div>
     </div>
 </div>
+<!-- 라이브리 시티 설치 코드 -->
+<div class="container" >
+<div id="lv-container" data-id="city" data-uid="MTAyMC80MzAyMC8xOTU2Ng==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+</div>
+</div>
+<!-- 시티 설치 코드 끝 -->
 {% endblock %}

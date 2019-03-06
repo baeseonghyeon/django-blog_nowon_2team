@@ -9,7 +9,7 @@ def home(request):
     #모든 블로그 글을 대상으로
     blog_list = Blog.objects.all()
     #블로그 객체 3개를 한 페이지로 묶기 
-    paginator = Paginator(blog_list, 3)
+    paginator = Paginator(blog_list, 4)
     #request된 페이지가 뭔지 알아내고 (request페이지를 변수에 담고)
     page = request.GET.get('page')
     #request된 페이지를 얻어온 뒤 return
