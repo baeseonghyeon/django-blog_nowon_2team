@@ -32,6 +32,7 @@
     var cnt = 0;
     var speed = 70; //글자가 찍히는 속도
     var timer1 = null;
+    var member =  $('.row.member')
         
     function gogogo(){
         document.getElementById('texts').innerHTML = text.substring(0, cnt) + "_";
@@ -42,14 +43,11 @@
             // 아래 주석으로 처리된 부분을 지우면 한번만 실행됩니다.
             clearTimeout(timer1)      
             cnt = 0;
+            member.addClass('show');
         }
     }
-        
     gogogo();
-
-    if (gogogo()) {
-        $('member').addclass("show")
-    }
+    
     
 </script>   
    
