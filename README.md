@@ -1,7 +1,7 @@
 # django Blog 구현 (멋쟁이 사자처럼 7기 운영진 스터디 노원 2팀)
 
 ## 멋쟁이 사자처럼 7기 운영진 스터디 팀 프로젝트의 일환으로 django로 구현한 블로그 입니다.
-[Visit the website](https://opnowon2.herokuapp.com/)
+### [Visit the website](https://opnowon2.herokuapp.com/)
 
 **다음과 같은 기능을 포함합니다.**
 1. model, amdin
